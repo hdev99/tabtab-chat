@@ -1,0 +1,12 @@
+export default () => {
+  const NEST_APP_MONGODB_USERNAME = process.env.NEST_APP_MONGODB_USERNAME,
+    NEST_APP_MONGODB_PASSWORD = process.env.NEST_APP_MONGODB_PASSWORD,
+    NEST_APP_MONGODB_CLUSTER = process.env.NEST_APP_MONGODB_CLUSTER,
+    NEST_APP_MONGODB_DATABASE = process.env.NEST_APP_MONGODB_DATABASE
+
+  console.log('[Database]:::Database name: ', NEST_APP_MONGODB_DATABASE)
+  const uri = `mongodb+srv://${NEST_APP_MONGODB_USERNAME}:${NEST_APP_MONGODB_PASSWORD}@${NEST_APP_MONGODB_CLUSTER}/${NEST_APP_MONGODB_DATABASE}`
+  return {
+    uri,
+  }
+}
